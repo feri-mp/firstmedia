@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test-firsmedia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="waltzerjs.js"></script>
+
+
+    <script>
+        // slider
+        $(document).ready(function(){
+          $('.slider').bxSlider();
+        });
+
+        // carousel
+        $(document).ready(function() {
+             $('#carousel').waltzer();
+        });
+
+        $('#carousel').waltzer({
+
+            // Enable vertical scrolling
+            vertical: false, 
+
+            // Number of items to scroll during each transition.
+            scroll: 1, 
+
+            // Item to start on, items will be reordered positioning the specified item first.
+            offset: 0, 
+
+            // Circular or linear scrolling.
+            circular: true, 
+
+            // Autoplay on load
+            auto: false, 
+
+            // Pause time between each automatic transition, when autoplay is enabled.
+            autoPause : 1000, 
+
+            // Time to complete each transition.
+            speed: 300, 
+
+            // Easing options. Requires jQuery easing plugin or jQuery UI.
+            easing: 'swing', 
+
+            // Enable arrows navigation
+            navBtns: true, 
+
+            // Class name for the 'previous' button 
+            leftNavBtn: 'left-nav-btn', 
+
+            // Class name for the 'next' button 
+            rightNavBtn: 'right-nav-btn', 
+
+            // Enable pager navigation
+            pager: false, 
+
+            // Callback functions
+            onCreate: null, 
+            onComplete: null, 
+            onForwardComplete: null,
+            onBackwardComplete: null
+
+         });
+
+         // start/stop auto play
+        $('#carousel').waltzer('start');
+        $('#carousel').waltzer('stop');
+
+        // go to the next slide
+        $('#carousel').waltzer('forward');
+
+        // back to the previous slide
+        $('#carousel').waltzer('backward');
+
+        // destroy the carousel
+        $('#carousel').waltzer('destroy');
+
+        $('#carousel').on('forward', function(e){
+        // do something
+        });
+
+        $('#carousel').on('backward', function(e){
+        // do something
+        });
+
+        $('#carousel').on('forwardComplete', function(e){
+        // do something
+        });
+
+        $('#carousel').on('backwardComplete', function(e){
+        // do something
+        });
+
+        $('#carousel').on('move', function(e){
+        // do something
+        });
+
+        $('#carousel').on('moved', function(e){
+        // do something
+        });
+
+        // SELECT2
+        // In your Javascript (external .js resource or <script> tag)
+        $(document).ready(function() {
+            $('.select-area-2').select2();
+        });
+
+        
+    </script>
+    <!-- <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
+    </script> -->
+
+</head>
+<body>
+    <div id="navbar" class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="hd-top-left"></div>
+                <div class="hd-top-rigt">
+                    <ul>
+                        <li><a href="">Residential</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">Advertise with Us</a></li>
+                        <li><a href="">Partners</a></li>
+                        <li><a href="">Article</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>  <!-- end of header top -->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="hd-btm-left">
+                    <img src="img/logo-fm.png" alt="logo-fm">
+                </div>
+                <div class="hd-btm-right">
+                    <ul>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">Special Deals</a></li>
+                        <li><a href="">Supports</a></li>
+                        <li><a href="">My First Media</a></li>
+                        <li><a href="">First Rewards</a></li>
+                        <li><a href="">E-official Store</a></li>
+                    </ul>
+                </div>
+            </div><!-- end of header bottom -->
+        </div><!-- end of container -->
+    </div> <!-- end of header -->
+    <div class="slider">
+        <div><img src="img/Main-Banner-1.jpg" alt="slider-1"></div>
+        <div><img src="img/Main-Banner.jpg" alt="slider-2"></div>
+    </div> <!-- end of slider -->
+    <div class="about">
+        <div class="container">
+            <div class="left">
+                <h2>Internet Cepat Tanpa Batas</h2>
+                <p>Upgrade internet Anda dengan Firstmedia internet cepat  memprioritaskan keamanan
+                    biaya hemat. Ngebut tanpa batas.</p>
+                <a class="btn-why" href="#"> Why First Media? </a>
+            </div>
+            <div class="right">
+                <div class="img">
+                    <img src="img/introusp1.png" alt="Img-about">
+                </div>
+                
+            </div>
+        </div> <!-- end of container -->
+    </div><!-- end of About -->
+    <div class="paket">
+        <div class="container">
+            <h2>Pilihan Paket Internet Firstmedia</h2>
+            <div class="paket-sample">
+                <div class="paket-1">
+                    <h3>Family Plus HD</h3>
+                    <p class="first">internet speed up to</p>
+                    <div class="benefit">
+                        <span class="speed">15 mps</span>
+                        <div class="chn">
+                            <p class="title">Channel</p>
+                            <span class="channel"><p>145</p></span>
+                            <span class="chn-img"><img src="img/fmx-circle.png" alt=""></span>
+                        </div>
+                    </div>
+                    <p class="second">Akses video/TV streaming kualitas HD, Download gambar/music dan gaming.</p>
+                    <h5>Rp <span class="harga"> 371 .000</span> /bulan </h5>
+                    <a class="cta" href="">lihat </a>
+                </div> <!-- end of paket-1 -->
+
+                <div class="paket-2">
+                    <h3>D'LITE HD</h3>
+                    <p class="first">internet speed up to</p>
+                    <div class="benefit">
+                        <span  class="speed-2">15 mps</span>
+                        <div class="chn">
+                            <p class="title">Channel</p>
+                            <span class="channel-2">145</span>
+                            <span class="chn-img"><img src="img/fmx-circle.png" alt=""></span>
+                        </div>
+                    </div>
+                    <p class="second">Akses video/TV streaming kualitas HD, Download gambar/music dan gaming.</p>
+                    <h5>Rp <span class="harga"> 371 .000</span> /bulan </h5>
+                    <a class="cta" href="">lihat </a>
+                </div> <!-- end of paket-2 -->
+
+                <div class="paket-1">
+                    <h3>ELITE X1 4K</h3>
+                    <p class="first">internet speed up to</p>
+                    <div class="benefit">
+                        <span  class="speed-3">15 mps</span>
+                        <div class="chn">
+                            <p class="title">Channel</p>
+                            <span class="channel-3">145</span>
+                            <span class="chn-img"><img src="img/fmx-circle.png" alt=""></span>
+                        </div>
+                    </div>
+                    <p class="second">Akses video/TV streaming kualitas HD, Download gambar/music dan gaming.</p>
+                    <h5>Rp <span class="harga"> 371 .000</span> /bulan </h5>
+                    <a class="cta" href="">lihat </a>
+                </div> <!-- end of paket-1 -->
+                
+            </div> <!-- end of paket sample -->
+            <div class="info">
+                <div class="zero-left"></div>
+                <div class="pkt"><a class="info-paket" href=""> Lihat Semua Paket </a></div>
+                <div class="zero-right"></div>
+            </div>  <!-- end of info -->
+        </div> <!-- end of container -->
+    </div> <!-- end of paket -->
+    <div class="hot-news">
+        <div class="container">
+            <div class="hot">
+                <div class="hot-left">
+                    <h3>Hot News dan Media Channel</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit. Mattis tincidunt commodo
+                        egestas ac dis dignissim pulvinar morbi
+                        at. Tellus at quisque sagittis tellus. 
+                    </p>
+                </div> <!-- end of left -->
+                <div class="hot-right">
+                    <div id="carousel">
+
+                        <div class="item">
+                            <div><img src="img/Highlight Scoob.jpg" alt="carousel"></div>
+                        </div>
+                    
+                        <div class="item">
+                            <div><img src="img/Highlight The-Outpost.jpg" alt="carousel"></div>
+                        </div>
+                    
+                        <div class="item">
+                            <div><img src="img/winners.jpg" alt="carousel"></div>
+                        </div>
+                    
+                    
+                    </div>
+                </div> <!-- end of right -->
+            </div><!-- end of hot -->
+        </div> <!-- end of container -->
+    </div><!-- end of hot news -->
+    <div class="cek-area">
+        <div class="container">
+            <div class="area">
+                <div class="area-left">
+                    <h3>Cek Area Anda</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit. Mattis tincidunt commodo egestas ac dis dignissim pulvinar morbi at.
+                        Tellus at quisque sagittis tellus. 
+                    </p>
+                    <a class="btn-cek" href=""> Cek Sekarang</a>
+                </div>
+                <div class="area-right">
+                    <div class="img">
+                        <img src="img/index.jpg" alt="peta">
+                    </div>
+                </div>
+            </div><!-- end of area -->
+        </div><!-- end of container -->
+    </div><!-- end of cek area -->
+
+    <div class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="top-flex">
+                    <div class="footer-top-left">
+                        <h3>Temukan First Media di Kota Anda!</h3>
+                        <ul>
+                            <li class="area-cek"><a href="#">Kota Jakarta Barat</a></li>|
+                            <li class="area-cek"><a href="#">Kota Jakarta Timur</a></li>| 
+                            <li class="area-cek"><a href="#">Kota Jakarta Pusat</a></li>|
+                            <li class="area-cek"><a href="/#">Kota Jakarta Selatan</a></li>| 
+                            <li class="area-cek"><a href="/#">Kota Jakarta Utara</a></li>|
+                            <li class="area-cek"><a href="">Kota Tangerang</a></li>|
+                            <li class="area-cek"><a href="">Tangerang Selatan</a></li>|
+                            <li class="area-cek"><a href="#">Kabupaten Tangerang</a></li>|
+                            <li class="area-cek"><a href="#">Kota Bekasi</a></li>|
+                            <li class="area-cek"><a href="#">Kota Depok</a></li>|
+                            <li class="area-cek"><a href="#">Kota Bogor</a></li>|
+                            <li class="area-cek"><a href="#">Kabupaten Bogor</a></li>
+                            <li class="area-cek"><a href="#">Kota Bandung</a></li>|
+                            <li class="area-cek"><a href="#">Kabupaten Bandung</a></li>|
+                            <li class="area-cek"><a href="#">Kabupaten Bandung Barat</a></li>|
+                            <li class="area-cek"><a href="#">Kota Cirebon</a></li>|
+                            <li class="area-cek"><a href="#">Kota Purwakarta</a></li>|
+                            <li class="area-cek"><a href="">Kota Semarang</a></li>|
+                            <li class="area-cek"><a href="#">Kota Solo</a></li>|
+                            <li class="area-cek"><a href="">Kota Surabaya</a></li>| 
+                            <li class="area-cek"><a href="#">Kota Kediri</a></li>|
+                            <li class="area-cek"><a href="#">Kota Malang</a></li>|
+                            <li class="area-cek"><a href="#">Kota Gresik</a></li>|
+                            <li class="area-cek"><a href="#">Kota Sidoarjo</a></li>|
+                            <li class="area-cek"><a href="#">Kota Bali</a></li>|
+                            <li class="area-cek"><a href="#">Kota Medan</a></li>|
+                            <li class="area-cek"><a href="#">Kota Batam</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-top-right">
+                        <div class="cs-left">
+                            <div class="cs-top-1">
+                                <div class="icon-1">
+                                    <img src="img/ico_salescenter.png" alt="icon">
+                                </div>
+                                <p>
+                                    Untuk Berlangganan <br>
+                                    Sales Center<br>
+                                    1500 290(PSTN)
+                                </p>
+                            </div>
+                            <select class="select-area-2" name="state">
+                                <option value="AL">Jakarta 021-2559 6558</option>
+                                <option value="WY">Tanggerang 021-2559 6558</option>
+                            </select>
+                         
+                        </div>
+                        <div class="cs-right">
+                            <div class="cs-top-2">
+                                <div class="icon-2">
+                                    <img src="img/ico_contactcenter.png" alt="icon">
+                                </div>
+                                <p>
+                                    Untuk Berlangganan<br>
+                                    Sales Center<br>
+                                    1500 290(PSTN)
+                                </p>
+                                
+                            </div>
+                            <select class="select-area-2" name="state">
+                                <option value="AL">Jakarta 021-2559 6558</option>
+                                <option value="WY">Tanggerang 021-2559 6558</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-mid">
+            <div class="container">
+                <div class="mid-flex">
+                    <div class="mid-left">
+                        <div class="img-mid">
+                            <img src="img/award.png" alt="img-footer-left">
+                        </div>
+                    </div>
+                    <div class="mid-right">
+                        <div class="img-right">
+                            <div class="img-value">
+                                <img src="img/value-mid-footer.png" alt="img-right-1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="btm-flex">
+                    <div class="btm-1">
+                        <div class="img-btm">
+                            <img src="img/logo-link-net.png" alt="logo-footer">
+                        </div>
+                    </div>
+                    <div class="btm-2">
+                        <p>
+                            Copyright ©2021 PT Link Net Tbk - FIRST MEDIA <br>
+                            <span class="btm-second">
+                                Legal Disclaimer Privacy Policy Fair Usage Policy   
+                            </span>
+                        </p>
+                    </div>
+                    <div class="btm-3">
+                        <div class="sosial">
+                            <img src="img/intagram_logo.png" alt="ig">
+                            <img src="img/icon_fb2.png" alt="fb">
+                            <img src="img/icon_tw2.png" alt="tw">
+                            <img src="img/icon_yt2.png" alt="yt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
